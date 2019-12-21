@@ -178,7 +178,8 @@ function showFinish(time) {
 //To store score in local storage
 function storeScore(score) {
     //scores = document.localStorage.getItem("scores");
-    scores.push((document.getElementById("yourscr").value) + " : " + score);
+    //scores.push((document.getElementById("yourscr").value) + " : " + score);
+    scores.push((document.getElementById("yourscr").value) + " (" + (qType === 'js' ? 'Javascript' : 'Olympics') + ") : " + score);
     localStorage.setItem("scores", scores);
     
     document.getElementById('result').innerText = '';
